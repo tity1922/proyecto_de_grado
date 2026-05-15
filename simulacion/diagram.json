@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "author": "Velxio",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "uno",
+      "top": 0,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-servo",
+      "id": "servo-1778253908638-842knk1il",
+      "top": 203,
+      "left": 289,
+      "attrs": {
+        "angle": 0,
+        "horn": "single",
+        "hornColor": "#ccc"
+      }
+    },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir-motion-sensor-1778253924212-onu9y5m80",
+      "top": -26,
+      "left": 237,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "servo-1778253908638-842knk1il:GND",
+      "esp32-cam:GND.1",
+      "black",
+      []
+    ],
+    [
+      "servo-1778253908638-842knk1il:V+",
+      "esp32-cam:5V.1",
+      "#cc0000",
+      []
+    ],
+    [
+      "servo-1778253908638-842knk1il:PWM",
+      "esp32-cam:12",
+      "#22c55e",
+      []
+    ],
+    [
+      "pir-motion-sensor-1778253924212-onu9y5m80:VCC",
+      "esp32-cam:VCC",
+      "#cc0000",
+      []
+    ],
+    [
+      "pir-motion-sensor-1778253924212-onu9y5m80:OUT",
+      "esp32-cam:13",
+      "#22c55e",
+      []
+    ],
+    [
+      "pir-motion-sensor-1778253924212-onu9y5m80:GND",
+      "esp32-cam:GND.3",
+      "black",
+      []
+    ]
+  ]
+}
